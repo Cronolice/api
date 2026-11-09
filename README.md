@@ -7,6 +7,52 @@ Aplicación web desarrollada con **React** y **Vite** que reúne diferentes APIs
 - [Aplicación publicada](https://cronolice.github.io/api/)
 - [Repositorio en GitHub](https://github.com/Cronolice/api)
 
+## Explicación fácil
+
+Esta aplicación es como un **menú de servicios**:
+
+1. Entras a la página y ves el Inicio.
+2. El menú de arriba te permite elegir una sección.
+3. Cada sección se conecta a una API diferente.
+4. La API devuelve información, imágenes o frases.
+5. React muestra esa información en tarjetas.
+6. Si la información está cargando, aparece un mensaje.
+7. Si algo falla, se muestra un aviso en lugar de dejar la pantalla vacía.
+
+Por ejemplo, cuando entras a **Pokémon**, la aplicación le pide 12 Pokémon a PokéAPI. Después muestra su imagen, nombre, número y tipos. Si pulsas **Cargar más Pokémon**, pide otros 12 y los agrega debajo de los anteriores.
+
+### ¿Qué es una API?
+
+Una API es una puerta que permite pedir información a otro servicio. La aplicación hace una pregunta, el servicio responde con datos y React los coloca en la página.
+
+Ejemplo sencillo:
+
+```text
+Aplicación: "Dame 12 Pokémon"
+PokéAPI: "Aquí están sus nombres, imágenes y tipos"
+Aplicación: muestra tarjetas en pantalla
+```
+
+### ¿Qué hace cada parte?
+
+- **React:** construye la pantalla y la actualiza.
+- **Vite:** inicia el proyecto y prepara la versión final.
+- **JavaScript:** contiene la lógica de los botones y las consultas.
+- **CSS:** define colores, tamaños, tarjetas y adaptación a celulares.
+- **APIs:** proporcionan los datos que aparecen en la página.
+- **GitHub Actions:** construye y publica la aplicación automáticamente.
+
+### Recorrido de un clic
+
+Cuando pulsas **Noticias**, ocurre lo siguiente:
+
+1. El menú cambia la sección activa.
+2. `App.jsx` muestra `Noticias.jsx`.
+3. `Noticias.jsx` consulta GNews.
+4. La respuesta se guarda en una variable de React.
+5. La pantalla se actualiza con las noticias.
+6. `Noticias.css` organiza las noticias en tarjetas.
+
 ## Tecnologías
 
 - React 19
