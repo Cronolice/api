@@ -1,0 +1,186 @@
+/* Noticias.css */
+.noticias {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 3rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.noticias h1 {
+  text-align: center;
+  color: var(--text-h);
+  margin: 0 0 1.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+/* Botones de categorías */
+.categoria {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap; /* Permite que los botones bajen de línea en celulares */
+}
+
+.categoria button {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #e5e7eb;
+  background-color: var(--bg);
+  color: var(--text);
+  border-radius: 20px; /* Botones estilo píldora */
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.categoria button:hover {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.categoria button.activa {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.25);
+}
+
+.categoria button:focus-visible {
+  outline: 3px solid rgba(96, 165, 250, 0.45);
+  outline-offset: 2px;
+}
+
+/* Contenedor de las tarjetas de noticias */
+.noticias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjeta individual */
+.noticias-card {
+  background: var(--bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.noticias-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.noticias-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Evita que la imagen se deforme */
+}
+
+.noticia-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Permite empujar el botón al fondo si los textos son cortos */
+}
+
+.noticia-info small {
+  color: #3b82f6;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.noticia-info h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: var(--text-h);
+  line-height: 1.4;
+}
+
+.noticia-info p {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1; 
+  /* Limita el texto a 3 líneas con puntos suspensivos */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.noticia-info a {
+  text-decoration: none;
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Fuerza el botón hacia la parte inferior de la tarjeta */
+}
+
+.noticia-info a:hover {
+  background-color: #3b82f6;
+}
+
+.estado-noticias {
+  grid-column: 1 / -1;
+  padding: 3rem 1rem;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  text-align: center;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: #b91c1c;
+  text-align: center;
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.error strong {
+  font-size: 1rem;
+}
+
+.error span {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .noticias {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .categoria {
+    gap: 0.6rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .categoria button {
+    flex: 1 1 30%;
+    padding: 0.6rem 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .noticias-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}

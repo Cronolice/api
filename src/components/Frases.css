@@ -1,0 +1,112 @@
+.seccion-frases {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #333;
+}
+
+/* Encabezado */
+.frases-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.frases-titulo {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+/* Botones */
+.btn-frases,
+.btn-reintentar {
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #ffffff;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-frases:hover:not(:disabled),
+.btn-reintentar:hover {
+  background-color: #0056b3;
+}
+
+.btn-frases:disabled {
+  background-color: #90caf9;
+  cursor: not-allowed;
+}
+
+.btn-frases:active:not(:disabled),
+.btn-reintentar:active {
+  transform: scale(0.98);
+}
+
+/* Rejilla (Grid) de Frases */
+.frases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta de Frase */
+.frase-card {
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #007bff;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.frase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.frase-contenido {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #1f2937;
+  font-style: italic;
+  margin: 0 0 16px 0;
+}
+
+.frase-autor {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4b5563;
+  text-align: right;
+  margin: 0;
+}
+
+/* Estados */
+.estado-texto {
+  text-align: center;
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 40px 0;
+}
+
+.estado-error {
+  text-align: center;
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}

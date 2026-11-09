@@ -1,0 +1,98 @@
+.seccion-pokemon {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 3rem;
+  color: var(--text);
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.25rem;
+}
+
+.pokemon-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pokemon-card:hover {
+  box-shadow: 0 12px 24px rgba(234, 179, 8, 0.18);
+  transform: translateY(-4px);
+}
+
+.pokemon-imagen {
+  display: block;
+  width: 100%;
+  height: 220px;
+  padding: 1rem;
+  box-sizing: border-box;
+  object-fit: contain;
+  background: linear-gradient(145deg, #fefce8, #f3f4f6);
+}
+
+.pokemon-card .noticia-info {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.pokemon-card .noticia-info small {
+  color: #ca8a04;
+}
+
+.pokemon-card .noticia-info h3 {
+  margin-bottom: 0.5rem;
+}
+
+.pokemon-nombre {
+  text-transform: capitalize;
+}
+
+.pokemon-card .noticia-info p {
+  margin: 0;
+}
+
+.pokemon-estado {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.pokemon-cargar {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pokemon-cargar button {
+  padding: 0.8rem 1.4rem;
+  border: 0;
+  border-radius: 999px;
+  background: #eab308;
+  color: #422006;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.pokemon-cargar button:hover {
+  background: #facc15;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .seccion-pokemon {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .pokemon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .pokemon-imagen {
+    height: 170px;
+  }
+}

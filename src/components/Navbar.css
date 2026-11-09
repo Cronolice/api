@@ -1,0 +1,45 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo span {
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links button {
+  background: transparent;
+  border: none;
+  color: #a0a0a0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links button:hover {
+  color: white;
+  background-color: #333;
+}
+
+/* Estilo para el botón activo */
+.nav-links button.selecionado {
+  color: white;
+  background-color: #3b82f6; /* Azul moderno */
+}
